@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  background-color: #000;
+  height: 371.6rem;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(36.85% 77.85% at 97.7% 65.72%, rgba(120, 71, 182, 0.11) 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(117.28% 24.93% at 92.15% 43.64%, rgba(89, 34, 178, 0.18) 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(57.4% 50.38% at 0% 80.96%, rgba(42, 0, 209, 0.15) 0%, rgba(44, 8, 73, 0) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0.24) 100%), radial-gradient(33.19% 26.29% at 97.62% 10.36%, rgba(19, 0, 238, 0.2) 0%, rgba(29, 12, 80, 0.08) 100%), radial-gradient(58.87% 49.96% at 3.2% 22.9%, rgba(100, 13, 168, 0.23) 0%, rgba(21, 8, 49, 0.09) 100%);
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 120rem;
+}
+
+.transition {
+  transition: transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1);
+}
+
+.show-nav {
+  height: 28rem;
+  transform: translateY(0.5rem);
+  transition: height 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.105), padding 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.105), transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.105);
+}
+
+.hide-nav {
+  height: 0;
+  padding: 0;
+  transform: translateY(-0.5rem);
+  transition: height 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.105), padding 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.105), transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.105);
+}
+
+.hide {
+  display: none;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+nav .info-nav {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+nav .info-nav i {
+  font-size: 2rem;
+}
+nav .info-nav .info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 3.5rem;
+  padding: 0 1.6rem;
+}
+nav .info-nav .info-container .social {
+  display: flex;
+  align-items: center;
+}
+nav .info-nav .info-container a {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #A7A7A7;
+  padding: 0 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+nav .info-nav .info-container a:hover {
+  color: #4e23fb;
+}
+nav .main-nav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 6rem;
+  margin-top: 3.5rem;
+  background-color: transparent;
+}
+nav .main-nav .burger-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  padding-right: 0;
+}
+nav .main-nav .burger-box .logo {
+  display: flex;
+}
+nav .main-nav .burger-box .logo img {
+  width: 70%;
+}
+nav .main-nav .burger-box .burger-icon {
+  padding: 0 2rem;
+  font-size: 4rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+nav .main-nav .burger-box .burger-icon .fa-xmark {
+  font-size: 4.65rem;
+}
+nav .main-nav .burger-box .burger-icon:hover {
+  color: #4e23fb;
+}
+nav .main-nav .nav-items {
+  background-color: #000;
+}
+nav .main-nav .nav-items .links {
+  padding: 0 2rem;
+  overflow: hidden;
+}
+nav .main-nav .nav-items .links .active {
+  color: #ffffff;
+}
+nav .main-nav .nav-items .links a {
+  display: block;
+  color: #A7A7A7;
+  font-size: 1.8rem;
+  font-weight: 800;
+  padding: 1.2rem 0;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  nav .info-nav .info-container {
+    padding: 0 2rem;
+  }
+  nav .info-nav .info-container .social i {
+    line-height: 3.5rem;
+  }
+  nav .info-nav .info-container a {
+    font-size: 1.2rem;
+  }
+  nav .main-nav {
+    height: 8rem;
+    background-color: transparent;
+  }
+  nav .main-nav .nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  nav .main-nav .nav-container .burger-box {
+    padding-left: 0;
+  }
+  nav .main-nav .nav-container .burger-box .burger-icon {
+    display: none;
+  }
+  nav .main-nav .nav-container .nav-items {
+    padding: 0;
+    background-color: transparent;
+  }
+  nav .main-nav .nav-container .nav-items .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    height: auto;
+    padding: 0;
+    transform: translateY(0.1rem);
+  }
+  nav .main-nav .nav-container .nav-items .links .active {
+    color: #ffffff;
+  }
+  nav .main-nav .nav-container .nav-items .links a {
+    font-size: 2rem;
+    padding-left: 2rem;
+  }
+}/*# sourceMappingURL=style.css.map */
