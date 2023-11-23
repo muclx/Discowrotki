@@ -15,7 +15,7 @@ const hideInfo = () => {
         mainNav.style.transform = "translateY(0)";
         mainNav.style.background = "transparent";
     }
-    else if (window.scrollY > 30) {
+    else if (window.scrollY > 24) {
         infoNav.classList.add("transition")
         infoNav.style.transform = "translateY(-3.5rem)";
         mainNav.classList.add("transition")

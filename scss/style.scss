@@ -55,6 +55,8 @@ body {
 nav {
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 1000;
 
     .info-nav {
         position: fixed;
@@ -101,7 +103,7 @@ nav {
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 6rem;
+        height: 6.2rem;
         margin-top: 3.5rem;
         background-color: transparent;
 
@@ -185,6 +187,69 @@ nav {
     }
 }
 
+.title-container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .white-text {
+        font-weight: 700;
+        color: $t-color;
+    }
+
+    .gradient {
+        background-clip: text;
+        color: transparent;
+        font-weight: 800;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        background-image: $t-gray-gradient;
+    }
+
+    h2 {
+        font-size: 2.8rem;
+        background-image: $color-gradient;
+    }
+
+    .day {
+        padding-top: 1rem;
+        background-image: $t-gray-gradient;
+        font-size: 2.4rem;
+
+        span {
+            padding-left: 0.5rem;
+        }
+    }
+
+    .enter-text {
+        padding: 1rem;
+
+        p {
+            text-align: left;
+            padding-top: 1rem;
+            color: $t-2-color;
+            font-size: 2.2rem;
+            // text-align: justify;
+        }
+
+
+
+        .contact-phone {
+            cursor: pointer;
+            transition: color .3s;
+        }
+
+        .contact-phone:hover {
+            color: $hover-color;
+        }
+    }
+
+}
+
 @media(min-width:800px) {
     nav {
         .info-nav {
@@ -254,6 +319,58 @@ nav {
 
         }
     }
+
+    .title-container {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        h1 {
+            font-size: 8.5rem;
+        }
+
+        h2 {
+            font-size: 6.8rem;
+        }
+
+        .day {
+            padding-top: 1rem;
+            background-image: $t-gray-gradient;
+            font-size: 4.4rem;
+
+            span {
+                padding-left: 0.5rem;
+            }
+
+        }
+
+        .enter-text {
+            padding: 1rem;
+
+            p {
+                text-align: left;
+                padding-top: 1rem;
+                color: $t-2-color;
+                font-size: 2.2rem;
+                // text-align: justify;
+            }
+
+
+
+            .contact-phone {
+                cursor: pointer;
+                transition: color .3s;
+            }
+
+            .contact-phone:hover {
+                color: $hover-color;
+            }
+        }
+
+    }
+
 }
 
 @media(min-width:1024px) {
