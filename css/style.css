@@ -105,6 +105,7 @@ nav .main-nav .burger-box {
 }
 nav .main-nav .burger-box .logo {
   display: flex;
+  padding-left: 0;
 }
 nav .main-nav .burger-box .logo img {
   width: 70%;
@@ -139,9 +140,26 @@ nav .main-nav .nav-items .links a {
   padding: 1.2rem 0;
   text-decoration: none;
   overflow: hidden;
+  transition: color 0.3s;
+}
+nav .main-nav .nav-items .links a:hover {
+  color: #ffffff;
 }
 
-@media (min-width: 768px) {
+.video-container {
+  margin-top: 11rem;
+  display: flex;
+  width: 100vw;
+  max-height: 84vh;
+}
+.video-container video {
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (min-width: 800px) {
   nav .info-nav .info-container {
     padding: 0 2rem;
   }
@@ -152,7 +170,7 @@ nav .main-nav .nav-items .links a {
     font-size: 1.2rem;
   }
   nav .main-nav {
-    height: 8rem;
+    height: 7rem;
     background-color: transparent;
   }
   nav .main-nav .nav-container {
@@ -183,6 +201,15 @@ nav .main-nav .nav-items .links a {
   }
   nav .main-nav .nav-container .nav-items .links .active {
     color: #ffffff;
+  }
+  nav .main-nav .nav-container .nav-items .links a {
+    font-size: 1.4rem;
+    padding-left: 1.2rem;
+  }
+}
+@media (min-width: 1024px) {
+  nav .main-nav {
+    height: 8rem;
   }
   nav .main-nav .nav-container .nav-items .links a {
     font-size: 2rem;
