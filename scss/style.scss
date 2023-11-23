@@ -15,7 +15,6 @@ body {
     font-family: 'Poppins', sans-serif;
     color: $t-color;
     background-color: $black-color;
-    height: 371.6rem;
 }
 
 .bg {
@@ -50,6 +49,11 @@ body {
 
 .hide {
     display: none;
+}
+
+.white-text {
+    font-weight: 700;
+    color: $t-color;
 }
 
 nav {
@@ -175,10 +179,10 @@ nav {
 }
 
 .video-container {
-    margin-top: 11rem;
+    margin-top: 14rem;
     display: flex;
     width: 100vw;
-    max-height: 84vh;
+    max-height: 82vh;
 
     video {
         width: 100%;
@@ -189,15 +193,13 @@ nav {
 
 .title-container {
     padding: 2rem;
+    padding-bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 
-    .white-text {
-        font-weight: 700;
-        color: $t-color;
-    }
+
 
     .gradient {
         background-clip: text;
@@ -225,30 +227,258 @@ nav {
         }
     }
 
-    .enter-text {
-        padding: 1rem;
+    .enter-container {
+        .enter-text {
+            padding: 1rem;
 
-        p {
-            text-align: left;
-            padding-top: 1rem;
-            color: $t-2-color;
-            font-size: 2.2rem;
-            // text-align: justify;
+            p {
+                text-align: left;
+                padding-top: 1rem;
+                color: $t-2-color;
+                font-size: 1.7rem;
+            }
+
+
+
+            .contact-phone {
+                cursor: pointer;
+                transition: color .3s;
+            }
+
+            .contact-phone:hover {
+                color: $hover-color;
+            }
         }
 
+        .img-box {
+            display: none;
+        }
+    }
 
 
-        .contact-phone {
+}
+
+.gradient-bg {
+    width: 100%;
+    padding: 2rem;
+    background: $color-gradient;
+
+    .offer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        gap: 2rem;
+
+        .offer-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            height: 32rem;
+            width: 100%;
+            transition: border-radius .3s, background .3s, box-shadow .3s, transform .3s;
             cursor: pointer;
-            transition: color .3s;
+            text-decoration: none;
+
+            i {
+                font-size: 13rem;
+                color: $t-color;
+                transition: color .3s;
+            }
+
+            h3 {
+                padding-top: 1rem;
+                font-size: 3rem;
+                color: $t-color;
+            }
+
+            p {
+                color: $t-2-color;
+                font-size: 1.7rem;
+                text-align: center;
+            }
         }
 
-        .contact-phone:hover {
+        .offer-box:hover {
+            border-radius: 1.5rem;
+            background: rgba(217, 217, 217, 0.10);
+            box-shadow: 0px 15px 20px 0px rgba(35, 16, 36, 0.81);
+            transform: scale(1.04);
+        }
+
+        .offer-box:hover>i {
             color: $hover-color;
         }
     }
 
 }
+
+.price-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 8rem;
+
+    h2 {
+        font-size: 5rem;
+        text-transform: uppercase;
+        background: $t-gray-gradient;
+        background-clip: text;
+        color: transparent;
+        text-align: center;
+        letter-spacing: .5rem;
+    }
+
+    .line {
+        height: .1rem;
+        background-color: $t-color;
+        width: 30%;
+
+    }
+
+    .price-content {
+        padding: 3rem;
+        padding-top: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+
+        .price-box {
+            padding-top: 2rem;
+
+            h3 {
+                text-align: center;
+                font-size: 2.6rem;
+                padding: 1rem;
+                background: $color-gradient;
+                background-clip: text;
+                color: transparent;
+            }
+
+            .gradient {
+                background: $t-gray-gradient;
+                background-clip: text;
+                color: transparent;
+                text-align: center;
+                font-size: 1.8rem;
+                font-weight: 800;
+            }
+
+            p {
+                font-size: 1.8rem;
+                text-align: center;
+                font-weight: 800;
+            }
+
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            td,
+            th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: .8rem;
+
+            }
+
+            th {
+                border-top: none;
+
+            }
+
+            th:first-child,
+            td:first-child {
+                border-left: none;
+
+            }
+
+            th:last-child,
+            td:last-child {
+                border-right: none;
+
+            }
+
+            td {
+                border-bottom: none;
+            }
+
+            tr:nth-child(even) {
+                background-color: #131212;
+            }
+
+            .price-text {
+                padding-top: 3rem;
+
+                p {
+                    padding-top: 1rem;
+
+                    color: $t-2-color;
+                    font-weight: normal;
+                    text-align: left;
+                }
+
+            }
+        }
+    }
+
+
+}
+
+.map-container {
+    width: 100%;
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+
+    iframe {
+        width: 90%;
+        border-radius: 1.5rem;
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    padding: 2rem;
+    padding-bottom: 3rem;
+    background-color: $black-color;
+
+    // height: 20rem;
+    .footer-box {
+        width: 80%;
+        padding-top: 3rem;
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+
+        a {
+            color: $t-color;
+            transition: color .3s;
+        }
+
+        i {
+            font-size: 3rem;
+        }
+
+        a:hover {
+            color: $hover-color;
+        }
+    }
+}
+
 
 @media(min-width:800px) {
     nav {
@@ -265,7 +495,7 @@ nav {
                 }
 
                 a {
-                    font-size: 1.2rem;
+                    font-size: 1.4rem;
                 }
 
             }
@@ -321,24 +551,23 @@ nav {
     }
 
     .title-container {
-        padding: 2rem;
+        padding: 3rem;
+        padding-bottom: 0;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
 
         h1 {
-            font-size: 8.5rem;
+            font-size: 7rem;
         }
 
         h2 {
-            font-size: 6.8rem;
+            font-size: 5.4rem;
         }
 
         .day {
             padding-top: 1rem;
             background-image: $t-gray-gradient;
-            font-size: 4.4rem;
+            font-size: 3.4rem;
 
             span {
                 padding-left: 0.5rem;
@@ -346,34 +575,133 @@ nav {
 
         }
 
-        .enter-text {
-            padding: 1rem;
+        .enter-container {
+            display: flex;
 
-            p {
-                text-align: left;
-                padding-top: 1rem;
-                color: $t-2-color;
-                font-size: 2.2rem;
-                // text-align: justify;
+            .enter-text {
+                width: 50%;
+                padding: 1rem;
+
+                p {
+                    text-align: left;
+                    padding-top: 1rem;
+                    color: $t-2-color;
+                    font-size: 2.2rem;
+                }
+
+                .contact-phone {
+                    cursor: pointer;
+                    transition: color .3s;
+                }
+
+                .contact-phone:hover {
+                    color: $hover-color;
+                }
+            }
+
+            .img-box {
+                display: flex;
+                align-items: center;
+                width: 50%;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .gradient-bg {
+
+        .offer-container {
+            flex-direction: row;
+
+            .offer-box {
+
+                i {
+                    font-size: 13rem;
+                    color: $t-color;
+                    transition: color .3s;
+                }
+
+                h3 {
+                    padding-top: 1rem;
+                    font-size: 3rem;
+                    color: $t-color;
+                }
+
+                p {
+                    color: $t-2-color;
+                    font-size: 1.7rem;
+                    text-align: center;
+                }
             }
 
 
-
-            .contact-phone {
-                cursor: pointer;
-                transition: color .3s;
-            }
-
-            .contact-phone:hover {
-                color: $hover-color;
-            }
         }
 
     }
 
+    .price-container {
+
+        h2 {
+            font-size: 6rem;
+        }
+
+        .price-content {
+            padding: 0rem;
+            width: 90%;
+            flex-direction: row;
+            gap: 8rem;
+
+
+            .price-box {
+                width: 50%;
+
+                .price-text {
+                    padding-top: 3rem;
+
+                    p {
+                        padding-top: 1rem;
+                        font-size: 2.1rem;
+                        color: $t-2-color;
+                        font-weight: normal;
+                        text-align: left;
+                    }
+
+                }
+            }
+        }
+
+
+    }
+
+    .map-container {
+        padding-top: 10rem;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: center;
+        gap: 8rem;
+
+        .footer-box {
+            width: auto;
+            padding-top: 0;
+
+            i {
+                font-size: 3rem;
+                padding-right: 1rem;
+            }
+        }
+
+
+    }
+
+
 }
 
-@media(min-width:1024px) {
+@media(min-width:1020px) {
 
     nav {
 
