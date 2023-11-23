@@ -97,6 +97,8 @@ nav .info-nav .info-container a:hover {
 }
 nav .main-nav {
   position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   width: 100%;
