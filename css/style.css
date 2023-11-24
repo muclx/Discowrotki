@@ -402,24 +402,24 @@ footer .footer-box a:hover {
   color: #4e23fb;
 }
 
-.statute {
+.box-text {
   margin-top: 12rem;
   padding: 3rem;
   width: 90%;
 }
-.statute h2 {
+.box-text h2 {
   font-size: 4rem;
   text-align: center;
   padding: 2rem;
 }
-.statute p {
+.box-text p {
   font-size: 1.8rem;
   color: #A7A7A7;
 }
-.statute .space {
+.box-text .space {
   padding: 2rem 0;
 }
-.statute a {
+.box-text a {
   color: #4e23fb;
 }
 
