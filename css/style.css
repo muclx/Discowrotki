@@ -11,7 +11,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  color: #ffffff;
+  color: #cfcfcf;
   background-color: #000;
 }
 
@@ -50,7 +50,7 @@ body {
 
 .white-text {
   font-weight: 700;
-  color: #ffffff;
+  color: #cfcfcf;
 }
 
 nav {
@@ -140,7 +140,7 @@ nav .main-nav .nav-items .links {
   overflow: hidden;
 }
 nav .main-nav .nav-items .links .active {
-  color: #ffffff;
+  color: #cfcfcf;
 }
 nav .main-nav .nav-items .links a {
   display: block;
@@ -153,7 +153,7 @@ nav .main-nav .nav-items .links a {
   transition: color 0.3s;
 }
 nav .main-nav .nav-items .links a:hover {
-  color: #ffffff;
+  color: #cfcfcf;
 }
 
 .video-container {
@@ -237,7 +237,7 @@ nav .main-nav .nav-items .links a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 2rem;
   height: 32rem;
   width: 100%;
   transition: border-radius 0.3s, background 0.3s, box-shadow 0.3s, transform 0.3s;
@@ -246,13 +246,13 @@ nav .main-nav .nav-items .links a:hover {
 }
 .gradient-bg .offer-container .offer-box i {
   font-size: 13rem;
-  color: #ffffff;
+  color: #cfcfcf;
   transition: color 0.3s;
 }
 .gradient-bg .offer-container .offer-box h3 {
   padding-top: 1rem;
   font-size: 3rem;
-  color: #ffffff;
+  color: #cfcfcf;
 }
 .gradient-bg .offer-container .offer-box p {
   color: #A7A7A7;
@@ -262,7 +262,7 @@ nav .main-nav .nav-items .links a:hover {
 .gradient-bg .offer-container .offer-box:hover {
   border-radius: 1.5rem;
   background: rgba(217, 217, 217, 0.1);
-  box-shadow: 0px 15px 20px 0px rgba(35, 16, 36, 0.81);
+  box-shadow: 0px 15px 20px 0px rgba(33, 33, 103, 0.81);
   transform: scale(1.04);
 }
 .gradient-bg .offer-container .offer-box:hover > i {
@@ -287,7 +287,7 @@ nav .main-nav .nav-items .links a:hover {
 }
 .price-container .line {
   height: 0.1rem;
-  background-color: #ffffff;
+  background-color: #cfcfcf;
   width: 30%;
 }
 .price-container .price-content {
@@ -391,13 +391,35 @@ footer .footer-box p {
   font-size: 1.5rem;
 }
 footer .footer-box a {
-  color: #ffffff;
+  color: #cfcfcf;
   transition: color 0.3s;
+  text-decoration: none;
 }
 footer .footer-box i {
   font-size: 3rem;
 }
 footer .footer-box a:hover {
+  color: #4e23fb;
+}
+
+.statute {
+  margin-top: 12rem;
+  padding: 3rem;
+  width: 90%;
+}
+.statute h2 {
+  font-size: 4rem;
+  text-align: center;
+  padding: 2rem;
+}
+.statute p {
+  font-size: 1.8rem;
+  color: #A7A7A7;
+}
+.statute .space {
+  padding: 2rem 0;
+}
+.statute a {
   color: #4e23fb;
 }
 
@@ -442,7 +464,7 @@ footer .footer-box a:hover {
     transform: translateY(0.1rem);
   }
   nav .main-nav .nav-container .nav-items .links .active {
-    color: #ffffff;
+    color: #cfcfcf;
   }
   nav .main-nav .nav-container .nav-items .links a {
     font-size: 1.4rem;
@@ -501,13 +523,13 @@ footer .footer-box a:hover {
   }
   .gradient-bg .offer-container .offer-box i {
     font-size: 13rem;
-    color: #ffffff;
+    color: #cfcfcf;
     transition: color 0.3s;
   }
   .gradient-bg .offer-container .offer-box h3 {
     padding-top: 1rem;
     font-size: 3rem;
-    color: #ffffff;
+    color: #cfcfcf;
   }
   .gradient-bg .offer-container .offer-box p {
     color: #A7A7A7;
@@ -540,6 +562,7 @@ footer .footer-box a:hover {
     padding-top: 10rem;
   }
   footer {
+    max-height: 13rem;
     flex-direction: row;
     justify-content: center;
     gap: 8rem;

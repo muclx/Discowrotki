@@ -280,7 +280,7 @@ nav {
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 1rem;
+            padding: 2rem;
             height: 32rem;
             width: 100%;
             transition: border-radius .3s, background .3s, box-shadow .3s, transform .3s;
@@ -309,7 +309,7 @@ nav {
         .offer-box:hover {
             border-radius: 1.5rem;
             background: rgba(217, 217, 217, 0.10);
-            box-shadow: 0px 15px 20px 0px rgba(35, 16, 36, 0.81);
+            box-shadow: 0px 15px 20px 0px rgba(33, 33, 103, 0.81);
             transform: scale(1.04);
         }
 
@@ -471,6 +471,7 @@ footer {
         a {
             color: $t-color;
             transition: color .3s;
+            text-decoration: none;
         }
 
         i {
@@ -483,6 +484,31 @@ footer {
     }
 }
 
+.statute {
+    margin-top: 12rem;
+    padding: 3rem;
+    width: 90%;
+    // height: 100vh;
+
+    h2 {
+        font-size: 4rem;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    p {
+        font-size: 1.8rem;
+        color: $t-2-color;
+    }
+
+    .space {
+        padding: 2rem 0;
+    }
+
+    a {
+        color: $hover-color;
+    }
+}
 
 @media(min-width:800px) {
     nav {
@@ -685,6 +711,7 @@ footer {
     }
 
     footer {
+        max-height: 13rem;
         flex-direction: row;
         justify-content: center;
         gap: 8rem;
