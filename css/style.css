@@ -423,6 +423,28 @@ footer .footer-box a:hover {
   color: #4e23fb;
 }
 
+.galery-container {
+  margin-top: 13rem;
+  width: 100%;
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+  grid-gap: 1rem;
+}
+.galery-container img {
+  height: 30rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  display: block;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.galery-container img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 2rem black;
+}
+
 @media (min-width: 800px) {
   nav .info-nav .info-container {
     padding: 0 2rem;
