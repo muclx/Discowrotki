@@ -455,7 +455,6 @@ footer {
     padding-bottom: 3rem;
     background-color: $black-color;
 
-    // height: 20rem;
     .footer-box {
         width: 80%;
         padding-top: 3rem;
@@ -510,27 +509,55 @@ footer {
 }
 
 .galery-container {
-    margin-top: 13rem;
-    width: 100%;
-    display: grid;
-    padding: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
-    grid-gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: height .3s;
 
-    img {
-        height: 30rem;
-        object-fit: cover;
+    .galery-box {
+        height: 93rem;
+        overflow: hidden;
+        margin-top: 13rem;
         width: 100%;
-        display: block;
-        transition: transform .3s, box-shadow .3s;
-        cursor: pointer;
+        display: grid;
+        // padding: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+        grid-gap: 1rem;
+
+        .galery-img {
+            max-height: 30rem;
+
+            img {
+                height: 30rem;
+                object-fit: cover;
+                width: 100%;
+                display: block;
+                transition: transform .3s, box-shadow .3s;
+                cursor: pointer;
+            }
+
+            img:hover {
+                transform: scale(1.03);
+                box-shadow: 0 0 2rem black;
+            }
+        }
+
     }
 
-    img:hover {
-        transform: scale(1.03);
-        box-shadow: 0 0 2rem black;
+    .expand-btn {
+        width: 8rem;
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 5rem;
+        cursor: pointer;
+        transition: color .3s;
+    }
+
+    .expand-btn:hover {
+        color: $hover-color;
     }
 }
+
 
 
 
@@ -764,6 +791,31 @@ footer {
         p {
             font-size: 2rem;
             color: $t-2-color;
+        }
+    }
+
+    .galery-container {
+        .galery-box {
+            margin-top: 13rem;
+            width: 100%;
+            display: grid;
+            padding: 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+            grid-gap: 1rem;
+
+            img {
+                height: 30rem;
+                object-fit: cover;
+                width: 100%;
+                display: block;
+                transition: transform .3s, box-shadow .3s;
+                cursor: pointer;
+            }
+
+            img:hover {
+                transform: scale(1.03);
+                box-shadow: 0 0 2rem black;
+            }
         }
     }
 }
