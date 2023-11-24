@@ -404,16 +404,16 @@ footer .footer-box a:hover {
 
 .box-text {
   margin-top: 12rem;
-  padding: 3rem;
+  padding: 1rem;
   width: 90%;
 }
 .box-text h2 {
-  font-size: 4rem;
+  font-size: 2.5rem;
   text-align: center;
   padding: 2rem;
 }
 .box-text p {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   color: #A7A7A7;
 }
 .box-text .space {
@@ -574,6 +574,13 @@ footer .footer-box a:hover {
   footer .footer-box i {
     font-size: 3rem;
     padding-right: 1rem;
+  }
+  .box-text h2 {
+    font-size: 4rem;
+  }
+  .box-text p {
+    font-size: 2rem;
+    color: #A7A7A7;
   }
 }
 @media (min-width: 1020px) {
