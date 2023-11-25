@@ -12,7 +12,6 @@ const arrowRight = document.querySelector(".fa-chevron-right")
 let currentImageIndex = 0;
 
 
-
 const expandGalery = () => {
     galeryBox.style.height = "100%"
     expandBtn.style.display = "none"
@@ -42,29 +41,6 @@ const findIndex = () => {
     }
 }
 
-document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-        hideModal();
-    }
-});
-
-images.forEach(img => {
-    img.addEventListener('click', function (e) {
-        modalImage.src = e.currentTarget.src;
-        if (modalImage.src === images[images.length - 1].src) {
-            arrowRight.style.display = "none"
-            arrowLeft.style.display = "block"
-        }
-        else if (modalImage.src === images[0].src) {
-            arrowLeft.style.display = "none"
-            arrowRight.style.display = "block"
-        }
-        modal.style.display = "flex"
-        bodyModal.classList.add("modal-box")
-    })
-})
-
-
 
 function showNextImage() {
     currentImageIndex = findIndex()
@@ -91,8 +67,43 @@ function showPreviousImage() {
         arrowRight.style.display = "block"
     }
 }
+
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+        hideModal();
+    }
+});
+
+images.forEach(img => {
+    img.addEventListener('click', function (e) {
+        modalImage.src = e.currentTarget.src;
+        if (modalImage.src === images[images.length - 1].src) {
+            arrowRight.style.display = "none"
+            arrowLeft.style.display = "block"
+        }
+        else if (modalImage.src === images[0].src) {
+            arrowLeft.style.display = "none"
+            arrowRight.style.display = "block"
+        }
+        else {
+            arrowLeft.style.display = "block"
+            arrowRight.style.display = "block"
+
+        }
+        modal.style.display = "flex"
+        modal.classList.add = "test"
+        bodyModal.classList.add("modal-box")
+    })
+})
+
+
 closeIcon.addEventListener("click", hideModal)
 expandBtn.addEventListener("click", expandGalery)
 downloadIcon.addEventListener("click", downloadImages)
 arrowRight.addEventListener('click', showNextImage)
 arrowLeft.addEventListener('click', showPreviousImage)
+modal.addEventListener('click', e => {
+    if (e.target !== arrowLeft && e.target !== arrowRight && e.target !== downloadIcon && e.target !== modalImage) {
+        hideModal();
+    }
+})

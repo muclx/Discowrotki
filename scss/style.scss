@@ -240,6 +240,17 @@ nav {
                 padding-top: 1rem;
                 color: $t-2-color;
                 font-size: 1.7rem;
+
+                a {
+                    font-weight: bold;
+                    color: $t-color;
+                    transition: color .3s;
+                    cursor: pointer;
+                }
+
+                a:hover {
+                    color: $hover-color;
+                }
             }
 
 
@@ -281,14 +292,14 @@ nav {
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 4rem 2rem;
             height: 32rem;
             width: 100%;
-            cursor: pointer;
+            padding: 4rem 2rem;
             text-decoration: none;
             border-radius: 1.5rem;
             background: rgba(217, 217, 217, 0.10);
             box-shadow: 0px 5px 20px 0px rgba(33, 33, 103, 0.81);
+            cursor: pointer;
 
             .cursor-icon {
                 width: 100%;
@@ -535,16 +546,14 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: height .3s;
 
     .galery-box {
-        height: 93rem;
-        overflow: hidden;
-        margin-top: 13rem;
-        width: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 1rem;
+        width: 100%;
+        margin-top: 13rem;
+        overflow: hidden;
 
         .galery-img {
             max-height: 30rem;
@@ -579,8 +588,6 @@ footer {
     overflow: hidden;
     width: 100vw;
     height: 100vh;
-
-
 }
 
 .modal {
@@ -596,7 +603,7 @@ footer {
     background-color: rgba(0, 0, 0, .9);
 
     .modal-img {
-        padding: 8rem;
+        padding: 7rem;
         max-width: 70rem;
 
         img {
@@ -719,9 +726,7 @@ footer {
 
     .title-container {
         padding: 3rem;
-        padding-bottom: 0;
         display: flex;
-        flex-direction: column;
 
         h1 {
             font-size: 7rem;
@@ -732,13 +737,7 @@ footer {
         }
 
         .day {
-            padding-top: 1rem;
-            background-image: $t-gray-gradient;
             font-size: 3.4rem;
-
-            span {
-                padding-left: 0.5rem;
-            }
 
         }
 
@@ -747,23 +746,11 @@ footer {
 
             .enter-text {
                 width: 50%;
-                padding: 1rem;
 
                 p {
-                    text-align: left;
-                    padding-top: 1rem;
-                    color: $t-2-color;
                     font-size: 2.2rem;
                 }
 
-                .contact-phone {
-                    cursor: pointer;
-                    transition: color .3s;
-                }
-
-                .contact-phone:hover {
-                    color: $hover-color;
-                }
             }
 
             .img-box {
@@ -790,11 +777,6 @@ footer {
                 box-shadow: none;
 
                 .cursor-icon {
-                    // display: none;
-                    position: absolute;
-                    right: 50%;
-                    top: 4%;
-                    transform: translateX(50%);
 
                     i {
                         font-size: 1.4rem;
@@ -802,21 +784,7 @@ footer {
                 }
 
                 i {
-                    font-size: 13rem;
-                    color: $t-color;
-                    transition: color .3s;
-                }
-
-                h3 {
-                    padding-top: 1rem;
-                    font-size: 3rem;
-                    color: $t-color;
-                }
-
-                p {
-                    color: $t-2-color;
-                    font-size: 1.7rem;
-                    text-align: center;
+                    font-size: 10rem;
                 }
             }
 
@@ -881,7 +849,6 @@ footer {
             padding-top: 0;
 
             i {
-                font-size: 3rem;
                 padding-right: 1rem;
             }
         }
@@ -897,27 +864,14 @@ footer {
 
         p {
             font-size: 2rem;
-            color: $t-2-color;
         }
     }
 
     .galery-container {
         .galery-box {
-            margin-top: 13rem;
-            width: 100%;
-            display: grid;
+
             padding: 2rem;
             grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
-            grid-gap: 1rem;
-
-            img {
-                height: 30rem;
-                object-fit: cover;
-                width: 100%;
-                display: block;
-                transition: transform .3s, box-shadow .3s;
-                cursor: pointer;
-            }
 
             img:hover {
                 transform: scale(1.03);
@@ -927,59 +881,23 @@ footer {
     }
 
     .modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: none;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        z-index: 10000;
-        background-color: rgba(0, 0, 0, .9);
 
         .modal-img {
             padding: 8rem;
             max-width: 80rem;
             max-height: 80rem;
-
-            img {
-                width: 100%;
-                height: 100%;
-            }
         }
 
         i {
-            padding: 2rem;
-            position: absolute;
-            transform: translateY(-50%);
             font-size: 4rem;
-            cursor: pointer;
-            transition: color .3s;
-        }
-
-        i:hover {
-            color: $hover-color;
-        }
-
-        .fa-chevron-left {
-            left: 2%;
-            top: 50%;
-        }
-
-        .fa-chevron-right {
-            right: 2%;
-            top: 50%;
         }
 
         .fa-download {
-            top: 6%;
             right: 9rem;
             font-size: 3rem;
         }
 
         .fa-xmark {
-            top: 6%;
             right: 2rem;
             font-size: 4rem;
 
@@ -1012,5 +930,35 @@ footer {
             }
 
         }
+    }
+
+    .gradient-bg {
+
+        .offer-container {
+
+            .offer-box {
+
+
+                i {
+                    font-size: 13rem;
+                    color: $t-color;
+                    transition: color .3s;
+                }
+
+            }
+
+
+        }
+
+    }
+
+    .modal {
+
+        .modal-img {
+            padding: 0;
+        }
+
+
+
     }
 }
