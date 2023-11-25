@@ -53,14 +53,10 @@ images.forEach(img => {
         modalImage.src = e.currentTarget.src;
         if (modalImage.src === images[images.length - 1].src) {
             arrowRight.style.display = "none"
-        }
-        else {
             arrowLeft.style.display = "block"
         }
-        if (modalImage.src === images[0].src) {
+        else if (modalImage.src === images[0].src) {
             arrowLeft.style.display = "none"
-        }
-        else {
             arrowRight.style.display = "block"
         }
         modal.style.display = "flex"

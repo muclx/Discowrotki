@@ -276,16 +276,44 @@ nav {
         gap: 2rem;
 
         .offer-box {
+            position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 2rem;
+            padding: 4rem 2rem;
             height: 32rem;
             width: 100%;
-            transition: border-radius .3s, background .3s, box-shadow .3s, transform .3s;
             cursor: pointer;
             text-decoration: none;
+            border-radius: 1.5rem;
+            background: rgba(217, 217, 217, 0.10);
+            box-shadow: 0px 5px 20px 0px rgba(33, 33, 103, 0.81);
+
+            .cursor-icon {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                right: 50%;
+                top: 5%;
+                transform: translateX(50%);
+
+                i {
+                    font-size: 2rem;
+                    color: $t-2-color;
+
+                }
+
+                p {
+                    color: $t-2-color;
+                    font-size: 1rem;
+                    padding-left: 1rem;
+                }
+
+                ;
+            }
 
             i {
                 font-size: 13rem;
@@ -306,12 +334,7 @@ nav {
             }
         }
 
-        .offer-box:hover {
-            border-radius: 1.5rem;
-            background: rgba(217, 217, 217, 0.10);
-            box-shadow: 0px 15px 20px 0px rgba(33, 33, 103, 0.81);
-            transform: scale(1.04);
-        }
+
 
         .offer-box:hover>i {
             color: $hover-color;
@@ -574,12 +597,12 @@ footer {
 
     .modal-img {
         padding: 8rem;
-        max-width: 80rem;
-        max-height: 80rem;
+        max-width: 70rem;
 
         img {
             width: 100%;
             height: 100%;
+            max-height: 60rem;
         }
     }
 
@@ -587,7 +610,7 @@ footer {
         padding: 2rem;
         position: absolute;
         transform: translateY(-50%);
-        font-size: 4rem;
+        font-size: 3rem;
         cursor: pointer;
         transition: color .3s;
     }
@@ -608,14 +631,14 @@ footer {
 
     .fa-download {
         top: 6%;
-        right: 7rem;
-        font-size: 3rem;
+        right: 6rem;
+        font-size: 2rem;
     }
 
     .fa-xmark {
         top: 6%;
-        right: 2rem;
-        font-size: 4rem;
+        right: 1rem;
+        font-size: 3rem;
 
     }
 
@@ -761,6 +784,22 @@ footer {
             flex-direction: row;
 
             .offer-box {
+                transition: border-radius .3s, background .3s, box-shadow .3s, transform .3s;
+                border-radius: 0;
+                background: transparent;
+                box-shadow: none;
+
+                .cursor-icon {
+                    // display: none;
+                    position: absolute;
+                    right: 50%;
+                    top: 4%;
+                    transform: translateX(50%);
+
+                    i {
+                        font-size: 1.4rem;
+                    }
+                }
 
                 i {
                     font-size: 13rem;
@@ -779,6 +818,13 @@ footer {
                     font-size: 1.7rem;
                     text-align: center;
                 }
+            }
+
+            .offer-box:hover {
+                border-radius: 1.5rem;
+                background: rgba(217, 217, 217, 0.10);
+                box-shadow: 0px 15px 20px 0px rgba(33, 33, 103, 0.81);
+                transform: scale(1.04);
             }
 
 
@@ -878,6 +924,68 @@ footer {
                 box-shadow: 0 0 2rem black;
             }
         }
+    }
+
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 10000;
+        background-color: rgba(0, 0, 0, .9);
+
+        .modal-img {
+            padding: 8rem;
+            max-width: 80rem;
+            max-height: 80rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        i {
+            padding: 2rem;
+            position: absolute;
+            transform: translateY(-50%);
+            font-size: 4rem;
+            cursor: pointer;
+            transition: color .3s;
+        }
+
+        i:hover {
+            color: $hover-color;
+        }
+
+        .fa-chevron-left {
+            left: 2%;
+            top: 50%;
+        }
+
+        .fa-chevron-right {
+            right: 2%;
+            top: 50%;
+        }
+
+        .fa-download {
+            top: 6%;
+            right: 9rem;
+            font-size: 3rem;
+        }
+
+        .fa-xmark {
+            top: 6%;
+            right: 2rem;
+            font-size: 4rem;
+
+        }
+
+
     }
 }
 
