@@ -32,6 +32,15 @@ const downloadImages = () => {
     downloadLink.click();
     document.body.removeChild(downloadLink);
 }
+const findIndex = () => {
+    for (let i = 0; i < images.length; i++) {
+
+        if (modalImage.src === images[i].src) {
+            return i;
+            break;
+        }
+    }
+}
 
 document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
@@ -42,20 +51,18 @@ document.addEventListener('keydown', function (e) {
 images.forEach(img => {
     img.addEventListener('click', function (e) {
         modalImage.src = e.currentTarget.src;
+        if (modalImage.src === images[images.length - 1].src) {
+            arrowRight.style.display = "none"
+        }
+        if (modalImage.src === images[0].src) {
+            arrowLeft.style.display = "none"
+        }
         modal.style.display = "flex"
         bodyModal.classList.add("modal-box")
     })
 })
 
-const findIndex = () => {
-    for (let i = 0; i < images.length; i++) {
 
-        if (modalImage.src === images[i].src) {
-            return i;
-            break;
-        }
-    }
-}
 
 function showNextImage() {
     currentImageIndex = findIndex()
