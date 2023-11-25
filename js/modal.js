@@ -1,5 +1,3 @@
-const expandBtn = document.querySelector(".expand-btn")
-const galeryBox = document.querySelector(".galery-box")
 const galeryBoxes = document.querySelectorAll(".galery-img")
 const bodyModal = document.querySelector("body")
 const modal = document.querySelector(".modal")
@@ -10,13 +8,6 @@ const downloadIcon = document.querySelector(".download-icon")
 const arrowLeft = document.querySelector(".fa-chevron-left")
 const arrowRight = document.querySelector(".fa-chevron-right")
 let currentImageIndex = 0;
-
-
-const expandGalery = () => {
-    galeryBox.style.height = "100%"
-    expandBtn.style.display = "none"
-}
-
 
 const hideModal = () => {
     modal.style.display = "none"
@@ -98,7 +89,6 @@ images.forEach(img => {
 
 
 closeIcon.addEventListener("click", hideModal)
-expandBtn.addEventListener("click", expandGalery)
 downloadIcon.addEventListener("click", downloadImages)
 arrowRight.addEventListener('click', showNextImage)
 arrowLeft.addEventListener('click', showPreviousImage)
