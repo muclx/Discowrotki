@@ -6,9 +6,8 @@ const burgerIcon = document.querySelector(".fa-bars")
 const xIcon = document.querySelector(".fa-xmark")
 const burgerBox = document.querySelector(".burger-icon")
 const navElements = document.querySelectorAll(".links>a")
-const expandBtn = document.querySelector(".expand-btn")
-const galeryBox = document.querySelector(".galery-box")
-const galeryBoxes = document.querySelectorAll(".galery-img")
+
+
 const hideInfo = () => {
     if (window.scrollY < 10) {
         infoNav.classList.add("transition")
@@ -34,16 +33,6 @@ const toggleNav = () => {
 
 }
 
-const expandGalery = () => {
-    // const currentHeightPx = parseFloat(getComputedStyle(galeryBox).height);
-
-    // // Przekształć obecną wysokość na rem
-    // const currentHeightRem = currentHeightPx / parseFloat(getComputedStyle(document.documentElement).fontSize);
-
-    // // Dodaj 93rem
-    // galeryBox.style.height = currentHeightRem + 93 + 'rem';
-    galeryBox.style.height = "100%"
-}
 
 window.addEventListener("scroll", hideInfo)
 burgerBox.addEventListener('click', toggleNav)
@@ -55,4 +44,3 @@ document.addEventListener('click', e => {
 navElements.forEach(element => {
     element.addEventListener("click", toggleNav)
 })
-expandBtn.addEventListener("click", expandGalery)
