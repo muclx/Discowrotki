@@ -431,11 +431,23 @@ footer .footer-box a:hover {
   margin-top: 12rem;
   padding: 1rem;
   width: 90%;
+  max-width: 110rem;
+}
+.box-text .gradient {
+  background: linear-gradient(90deg, rgba(75, 142, 221, 0.85) 0%, rgba(141, 107, 236, 0.742) 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  text-align: center;
+  font-weight: 800;
 }
 .box-text h2 {
   font-size: 2.5rem;
   text-align: center;
   padding: 2rem;
+}
+.box-text h3 {
+  font-size: 2rem;
 }
 .box-text p {
   font-size: 1.7rem;
@@ -680,6 +692,9 @@ footer .footer-box a:hover {
   }
   .box-text h2 {
     font-size: 4rem;
+  }
+  .box-text h3 {
+    font-size: 3rem;
   }
   .box-text p {
     font-size: 2rem;
