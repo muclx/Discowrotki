@@ -54,8 +54,14 @@ images.forEach(img => {
         if (modalImage.src === images[images.length - 1].src) {
             arrowRight.style.display = "none"
         }
+        else {
+            arrowLeft.style.display = "block"
+        }
         if (modalImage.src === images[0].src) {
             arrowLeft.style.display = "none"
+        }
+        else {
+            arrowRight.style.display = "block"
         }
         modal.style.display = "flex"
         bodyModal.classList.add("modal-box")
@@ -74,7 +80,6 @@ function showNextImage() {
     }
     else {
         arrowLeft.style.display = "block"
-
     }
 }
 
