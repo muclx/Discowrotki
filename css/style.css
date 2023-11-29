@@ -491,10 +491,14 @@ footer .footer-box a:hover {
   overflow: hidden;
 }
 .galery-container .galery-box .galery-img {
+  position: relative;
   height: 30rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+.galery-container .galery-box .galery-img .loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .galery-container .galery-box .galery-img img {
   height: 30rem;

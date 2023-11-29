@@ -588,10 +588,15 @@ footer {
         overflow: hidden;
 
         .galery-img {
+            position: relative;
             height: 30rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+
+            .loader {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
 
             img {
                 height: 30rem;
