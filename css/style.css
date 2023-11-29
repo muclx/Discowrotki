@@ -491,7 +491,7 @@ footer .footer-box a:hover {
   overflow: hidden;
 }
 .galery-container .galery-box .galery-img {
-  max-height: 30rem;
+  height: 30rem;
   display: flex;
   justify-content: center;
   align-items: center;

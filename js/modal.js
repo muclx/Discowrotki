@@ -7,6 +7,7 @@ const closeIcon = document.querySelector(".close-icon")
 const downloadIcon = document.querySelector(".download-icon")
 const arrowLeft = document.querySelector(".fa-chevron-left")
 const arrowRight = document.querySelector(".fa-chevron-right")
+const loader = document.querySelectorAll(".loader")
 let currentImageIndex = 0;
 
 
@@ -32,14 +33,6 @@ const findIndex = () => {
         }
     }
 }
-function imageLoaded() {
-    const loader = document.querySelectorAll(".loader");
-    currentImageIndex = findIndex()
-
-    loader[currentImageIndex].style.display = "none";
-    images[currentImageIndex].style.display = "block";
-}
-
 
 function showNextImage() {
     currentImageIndex = findIndex()
@@ -74,6 +67,14 @@ document.addEventListener('keydown', function (e) {
 });
 
 images.forEach(img => {
+    img.addEventListener("load", function (e) {
+        img.style.opacity = 1;
+        currentImageIndex = findIndex()
+        loader.forEach(spinner => {
+            spinner.classList.add("hide")
+        })
+
+    })
     img.addEventListener('click', function (e) {
         modalImage.src = e.currentTarget.src;
         if (modalImage.src === images[images.length - 1].src) {
