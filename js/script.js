@@ -36,16 +36,6 @@ const toggleNav = () => {
 
 }
 
-video.addEventListener("load", function () {
-    video.style.opacity = 1;
-    loaderVideo.classList.add("hide");
-    console.log(video);
-
-})
-if (video.complete) {
-    video.style.opacity = 1;
-    loaderVideo.classList.add("hide");
-}
 window.addEventListener("scroll", hideInfo)
 burgerBox.addEventListener('click', toggleNav)
 document.addEventListener('click', e => {
