@@ -10,6 +10,9 @@ const video = document.querySelector("video")
 const loaderVideo = document.querySelector(".video-container>.loader")
 
 
+
+
+
 // console.log(video);
 const hideInfo = () => {
     if (window.scrollY < 10) {
@@ -45,4 +48,8 @@ document.addEventListener('click', e => {
 })
 navElements.forEach(element => {
     element.addEventListener("click", toggleNav)
+})
+video.addEventListener("loadeddata", function () {
+    video.style.opacity = 1
+    loaderVideo.classList.add("hide")
 })
