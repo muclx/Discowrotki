@@ -9,6 +9,7 @@ const arrowLeft = document.querySelector(".fa-chevron-left")
 const arrowRight = document.querySelector(".fa-chevron-right")
 let currentImageIndex = 0;
 
+
 const hideModal = () => {
     modal.style.display = "none"
     bodyModal.classList.remove("modal-box")
@@ -27,9 +28,16 @@ const findIndex = () => {
 
         if (modalImage.src === images[i].src) {
             return i;
-            break;
+            break
         }
     }
+}
+function imageLoaded() {
+    const loader = document.querySelectorAll(".loader");
+    currentImageIndex = findIndex()
+
+    loader[currentImageIndex].style.display = "none";
+    images[currentImageIndex].style.display = "block";
 }
 
 

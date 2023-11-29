@@ -7,6 +7,8 @@ const xIcon = document.querySelector(".fa-xmark")
 const burgerBox = document.querySelector(".burger-icon")
 const navElements = document.querySelectorAll(".links>a")
 
+
+
 const hideInfo = () => {
     if (window.scrollY < 10) {
         infoNav.classList.add("transition")

@@ -21,6 +21,23 @@ body {
   background: radial-gradient(36.85% 77.85% at 97.7% 65.72%, rgba(120, 71, 182, 0.11) 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(117.28% 24.93% at 92.15% 43.64%, rgba(89, 34, 178, 0.18) 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(57.4% 50.38% at 0% 80.96%, rgba(42, 0, 209, 0.15) 0%, rgba(44, 8, 73, 0) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0.24) 100%), radial-gradient(33.19% 26.29% at 97.62% 10.36%, rgba(19, 0, 238, 0.2) 0%, rgba(29, 12, 80, 0.08) 100%), radial-gradient(58.87% 49.96% at 3.2% 22.9%, rgba(100, 13, 168, 0.23) 0%, rgba(21, 8, 49, 0.09) 100%);
 }
 
+.loader {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .wrapper {
   width: 100%;
   margin: 0 auto;
@@ -475,6 +492,9 @@ footer .footer-box a:hover {
 }
 .galery-container .galery-box .galery-img {
   max-height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .galery-container .galery-box .galery-img img {
   height: 30rem;
