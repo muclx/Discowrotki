@@ -67,17 +67,16 @@ document.addEventListener('keydown', function (e) {
 });
 
 images.forEach(img => {
-    img.addEventListener("load", function (e) {
+    img.addEventListener("load", function () {
         img.style.opacity = 1;
-        currentImageIndex = findIndex()
-        var currentImageIndex = Array.from(images).indexOf(img);
-        // Ukryj loader tylko dla tego konkretnego obrazu
+        const currentImageIndex = Array.from(images).indexOf(img);
         loader[currentImageIndex].classList.add("hide");
-        // loader.forEach(spinner => {
-        //     spinner.classList.add("hide")
-        // })
 
     })
+    if (img.complete) {
+        const currentImageIndex = Array.from(images).indexOf(img);
+        loader[currentImageIndex].classList.add("hide");
+    }
     img.addEventListener('click', function (e) {
         modalImage.src = e.currentTarget.src;
         if (modalImage.src === images[images.length - 1].src) {

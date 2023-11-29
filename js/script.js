@@ -6,9 +6,11 @@ const burgerIcon = document.querySelector(".fa-bars")
 const xIcon = document.querySelector(".fa-xmark")
 const burgerBox = document.querySelector(".burger-icon")
 const navElements = document.querySelectorAll(".links>a")
+const video = document.querySelector("video")
+const loaderVideo = document.querySelector(".video-container>.loader")
 
 
-
+// console.log(video);
 const hideInfo = () => {
     if (window.scrollY < 10) {
         infoNav.classList.add("transition")
@@ -34,7 +36,16 @@ const toggleNav = () => {
 
 }
 
+video.addEventListener("load", function () {
+    video.style.opacity = 1;
+    loaderVideo.classList.add("hide");
+    console.log(video);
 
+})
+if (video.complete) {
+    video.style.opacity = 1;
+    loaderVideo.classList.add("hide");
+}
 window.addEventListener("scroll", hideInfo)
 burgerBox.addEventListener('click', toggleNav)
 document.addEventListener('click', e => {

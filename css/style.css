@@ -174,10 +174,19 @@ nav .main-nav .nav-items .links a:hover {
 }
 
 .video-container {
+  position: relative;
   margin-top: 14rem;
   display: flex;
   width: 100vw;
   max-height: 82vh;
+}
+.video-container .loader {
+  height: 5rem;
+  width: 5rem;
+  position: absolute;
+  left: 47%;
+  top: 42%;
+  transform: translate(-50%, -50%);
 }
 .video-container video {
   width: 100%;
@@ -485,7 +494,7 @@ footer .footer-box a:hover {
 .galery-container .galery-box {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1rem;
+  grid-gap: 0.6rem;
   width: 100%;
   margin-top: 13rem;
   overflow: hidden;
@@ -496,9 +505,8 @@ footer .footer-box a:hover {
 }
 .galery-container .galery-box .galery-img .loader {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  left: 42%;
+  top: 45%;
 }
 .galery-container .galery-box .galery-img img {
   height: 30rem;
@@ -506,6 +514,7 @@ footer .footer-box a:hover {
      object-fit: cover;
   width: 100%;
   display: block;
+  border-radius: 0.3rem;
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
 }

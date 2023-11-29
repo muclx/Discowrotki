@@ -202,10 +202,20 @@ nav {
 }
 
 .video-container {
+    position: relative;
     margin-top: 14rem;
     display: flex;
     width: 100vw;
     max-height: 82vh;
+
+    .loader {
+        height: 5rem;
+        width: 5rem;
+        position: absolute;
+        left: 47%;
+        top: 42%;
+        transform: translate(-50%, -50%);
+    }
 
     video {
         width: 100%;
@@ -582,7 +592,7 @@ footer {
     .galery-box {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 1rem;
+        grid-gap: .6rem;
         width: 100%;
         margin-top: 13rem;
         overflow: hidden;
@@ -593,9 +603,9 @@ footer {
 
             .loader {
                 position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
+                left: 42%;
+                top: 45%;
+                // transform: translate(-50%, -50%);
             }
 
             img {
@@ -603,6 +613,7 @@ footer {
                 object-fit: cover;
                 width: 100%;
                 display: block;
+                border-radius: .3rem;
                 transition: transform .3s, box-shadow .3s;
                 cursor: pointer;
             }
