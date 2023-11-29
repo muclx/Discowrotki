@@ -65,7 +65,6 @@ document.addEventListener('keydown', function (e) {
         hideModal();
     }
 });
-
 images.forEach(img => {
     img.addEventListener("load", function () {
         img.style.opacity = 1;
@@ -74,6 +73,7 @@ images.forEach(img => {
 
     })
     if (img.complete) {
+        img.style.opacity = 1;
         const currentImageIndex = Array.from(images).indexOf(img);
         loader[currentImageIndex].classList.add("hide");
     }
