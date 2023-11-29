@@ -70,9 +70,12 @@ images.forEach(img => {
     img.addEventListener("load", function (e) {
         img.style.opacity = 1;
         currentImageIndex = findIndex()
-        loader.forEach(spinner => {
-            spinner.classList.add("hide")
-        })
+        var currentImageIndex = Array.from(images).indexOf(img);
+        // Ukryj loader tylko dla tego konkretnego obrazu
+        loader[currentImageIndex].classList.add("hide");
+        // loader.forEach(spinner => {
+        //     spinner.classList.add("hide")
+        // })
 
     })
     img.addEventListener('click', function (e) {
