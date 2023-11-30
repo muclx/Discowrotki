@@ -226,8 +226,15 @@ nav .main-nav .nav-items .links a:hover {
 .title-container .day span {
   padding-left: 0.5rem;
 }
-.title-container .enter-container .enter-text {
+.title-container .enter-container {
   padding: 1rem;
+  padding-top: 5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.title-container .enter-container .enter-text {
+  padding-bottom: 4rem;
 }
 .title-container .enter-container .enter-text p {
   text-align: left;
@@ -251,8 +258,44 @@ nav .main-nav .nav-items .links a:hover {
 .title-container .enter-container .enter-text .contact-phone:hover {
   color: #4e23fb;
 }
-.title-container .enter-container .img-box {
-  display: none;
+.title-container .enter-container .bulletin-board-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.title-container .enter-container .bulletin-board-container .board-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Caveat", cursive;
+  max-width: 43rem;
+  min-height: 35rem;
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  background: radial-gradient(40.51% 95.01% at 81.57% 24.39%, rgba(91, 85, 85, 0.2) 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(39.28% 90.99% at 15.09% 51.84%, rgba(91, 85, 85, 0.2) 0%, rgba(0, 0, 0, 0) 100%), #2B1075;
+  box-shadow: 0px 0px 20px 0px rgba(95, 83, 83, 0.1), 0px 3px 20px 0px rgba(0, 0, 0, 0.25);
+}
+.title-container .enter-container .bulletin-board-container .board-box h2 {
+  padding-top: 1rem;
+  background-image: none;
+  font-size: 3.1rem;
+  color: #cfcfcf;
+  padding-bottom: 0.5rem;
+}
+.title-container .enter-container .bulletin-board-container .board-box .line {
+  width: 60%;
+  height: 0.1rem;
+  background-color: #cfcfcf;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-radius: 1.5rem;
+}
+.title-container .enter-container .bulletin-board-container .board-box p {
+  padding-top: 1.5rem;
+  font-size: 2.2rem;
+  color: #A7A7A7;
 }
 
 .gradient-bg {
@@ -605,7 +648,7 @@ footer .footer-box a:hover {
   font-size: 3rem;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 806px) {
   nav .info-nav .info-container {
     padding: 0 2rem;
   }
@@ -667,20 +710,28 @@ footer .footer-box a:hover {
   }
   .title-container .enter-container {
     display: flex;
+    flex-direction: row;
   }
   .title-container .enter-container .enter-text {
     width: 50%;
+    padding-bottom: 0rem;
   }
   .title-container .enter-container .enter-text p {
-    font-size: 2.2rem;
+    font-size: 1.7rem;
   }
-  .title-container .enter-container .img-box {
-    display: flex;
-    align-items: center;
+  .title-container .enter-container .bulletin-board-container {
     width: 50%;
+    padding: 0 2rem;
   }
-  .title-container .enter-container .img-box img {
-    width: 100%;
+  .title-container .enter-container .bulletin-board-container .board-box {
+    max-width: 43rem;
+    min-height: 44rem;
+  }
+  .title-container .enter-container .bulletin-board-container .board-box h2 {
+    font-size: 3.8rem;
+  }
+  .title-container .enter-container .bulletin-board-container .board-box p {
+    font-size: 2.8rem;
   }
   .gradient-bg .offer-container {
     flex-direction: row;
@@ -782,6 +833,12 @@ footer .footer-box a:hover {
   nav .main-nav .nav-container .nav-items .links a {
     font-size: 2rem;
     padding-left: 2rem;
+  }
+  .title-container .enter-container .enter-text p {
+    font-size: 2.2rem;
+  }
+  .title-container .enter-container .bulletin-board-container {
+    width: 50%;
   }
   .gradient-bg .offer-container .offer-box i {
     font-size: 13rem;
