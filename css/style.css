@@ -551,12 +551,11 @@ footer .footer-box a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0.5rem;
 }
 .galery-container .galery-box {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 0.5rem;
+  grid-gap: 0.2rem;
   width: 100%;
   margin-top: 13rem;
   overflow: hidden;
@@ -801,6 +800,7 @@ footer .footer-box a:hover {
   .galery-container .galery-box {
     padding: 2rem;
     grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    gap: 0.5rem;
   }
   .galery-container .galery-box .galery-img {
     height: 25rem;
