@@ -1,5 +1,14 @@
 @import './colors';
 
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(12, 11, 14);
+    border-radius: 6px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -632,6 +641,7 @@ footer {
     margin-top: 12rem;
     padding: 1rem;
     width: 90%;
+
     max-width: 110rem;
 
     .gradient {
@@ -992,6 +1002,7 @@ footer {
     }
 
     .box-text {
+        min-height: 94rem;
 
         h2 {
             font-size: 4rem;
